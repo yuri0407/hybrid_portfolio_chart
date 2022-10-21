@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <title>SKILLS</title>
+
+    <!-- jquery mobile -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+    <script src="script/jquery-1.11.1.min.js"></script>
+    <script src="script/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Echarts -->
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+
+    <!-- bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="script/bootstrap.bundle.min.js"></script>
+
+</head>
+<body style="height: 100%; margin: 0">
+		<div data-role="header" data-theme="a">
+			<a href="skills.html" rel="external" data-icon="arrow-l" data-direction="reverse">돌아가기</a>			
+			<h1 style="font-weight: bold;">CERTIFICATE</h1>
+		</div>
+
+        <div class="container mt-3">        
+            <table class="table table-striped">
+            <thead style="text-align: center;">
+                <tr>
+                    <th>자격명</th>
+                    <th>취득일자</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;">
+                <tr>
+                    <td width="50%">컴퓨터활용능력 1급</td>
+                    <td>2020. 10. 23.</td>
+                </tr>
+                <tr>
+                    <td width="50%">워드프로세서</td>
+                    <td>2019. 12. 06.</td>
+                </tr>
+                <tr>
+                    <td width="50%">정보처리기능사</td>
+                    <td>2019. 09. 05.</td>
+                </tr>
+                <tr>
+                    <td width="50%">ITQ(한글, 엑셀, 파워포인트) A등급</td>
+                    <td>2019. 03. 14.</td>
+                </tr>
+                <tr>
+                    <td width="50%">전자출판기능사</td>
+                    <td>2018. 12. 14.</td>
+                </tr>
+                <tr>
+                    <td width="50%">컴퓨터활용능력 2급</td>
+                    <td>2018. 03. 02.</td>
+                </tr>
+                <tr>
+                    <td width="50%">컴퓨터 그래픽스 운용기능사</td>
+                    <td>2016. 10. 07.</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <!-- certificate -->
+        <br><div id="certificate" style="height: 50%"></div>
+
+        <script type="text/javascript">
+        var dom = document.getElementById('certificate');
+        var myChart = echarts.init(dom, null, {
+            renderer: 'canvas',
+            useDirtyRect: false
+        });
+        var app = {};
+
+        var option;
+
+        option = {
+            title: {
+                text: "자격활용도",
+                left: "center",
+                
+            },
+        dataset: {
+        source: [
+            ['활용도', 'product'],
+            [78, '컴퓨터 그래픽스 운용기능사'],
+            [63, '전자출판기능사'],
+            [93, 'ITQ'],
+            [82, '정보처리기능사'],
+            [86, '워드프로세서'],
+            [90, '컴퓨터활용능력'],
+        ]
+        },
+        grid: { containLabel: true },
+        xAxis: { name: '활용도' },
+        yAxis: { type: 'category' },
+        visualMap: {
+        orient: 'horizontal',
+        left: 'center',
+        min: 10,
+        max: 100,
+        text: ['High', 'Low'],
+        // Map the score column to color
+        dimension: 0,
+        inRange: {
+            color: ['#65CAF2', '#B082C9', '#FF5F92']
+        }
+        },
+        series: [
+        {
+            type: 'bar',
+            encode: {
+            // Map the "amount" column to X axis.
+            x: '활용도',
+            // Map the "product" column to Y axis
+            y: 'product'
+            }
+        }
+        ]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+
+        window.addEventListener('resize', myChart.resize);
+        </script><br><br>
+
+       
+</body>
+</html>

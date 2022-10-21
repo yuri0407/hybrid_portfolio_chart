@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <title>SKILLS</title>
+
+    <!-- jquery mobile -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+    <script src="script/jquery-1.11.1.min.js"></script>
+    <script src="script/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- echarts -->
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+
+</head>
+<body style="height: 100%; margin: 0">
+		<div data-role="header" data-theme="a">
+			<a href="skills.html" rel="external" data-icon="arrow-l" data-direction="reverse">돌아가기</a>			
+			<h1>SKILLS</h1>
+		</div>
+        
+
+        <!-- Programming -->
+        <br><div id="programming" style="height: 50%"></div>
+
+        
+
+        <script type="text/javascript">
+        var dom = document.getElementById('programming');
+        var myChart = echarts.init(dom, null, {
+            renderer: 'canvas',
+            useDirtyRect: false
+        });
+        var app = {};
+
+        var option;
+
+        option = {
+            title: {
+                text: "Programming",
+                left: "center",
+                
+            },
+        dataset: {
+        source: [
+            ['활용도', 'product'],
+            [28, 'php'],
+            [32, 'Android'],
+            [46, 'Python'],
+            [65, 'Javascript'],
+            [82, 'CSS'],
+            [86, 'HTML'],
+            [78, 'Eclipse'],
+            [88, 'Visual Studio Code']
+        ]
+        },
+        grid: { containLabel: true },
+        xAxis: { name: '활용도' },
+        yAxis: { type: 'category' },
+        visualMap: {
+        orient: 'horizontal',
+        left: 'center',
+        min: 10,
+        max: 100,
+        text: ['High', 'Low'],
+        // Map the score column to color
+        dimension: 0,
+        inRange: {
+            color: ['#65CAF2', '#B082C9', '#FF5F92']
+        }
+        },
+        series: [
+        {
+            type: 'bar',
+            encode: {
+            // Map the "amount" column to X axis.
+            x: '활용도',
+            // Map the "product" column to Y axis
+            y: 'product'
+            }
+        }
+        ]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+
+        window.addEventListener('resize', myChart.resize);
+        </script><br><br>
+
+
+
+
+        <!-- Design -->
+        <div id="design" style="height: 30%"></div>
+
+        <script type="text/javascript">
+            var dom = document.getElementById('design');
+            var myChart = echarts.init(dom, null, {
+            renderer: 'canvas',
+            useDirtyRect: false
+            });
+            var app = {};
+            
+            var option;
+
+            option = {
+                title: {
+                    text: "Design",
+                    left: "center"
+                },
+        dataset: {
+            source: [
+            ['활용도', 'product'],
+            [75, 'Indesign'],
+            [87, 'Illustrator'],
+            [92, 'Photoshop']
+            ]
+        },
+        grid: { containLabel: true },
+        xAxis: { name: '활용도' },
+        yAxis: { type: 'category' },
+        visualMap: {
+            orient: 'horizontal',
+            left: 'center',
+            min: 10,
+            max: 100,
+            text: ['High Score', 'Low Score'],
+            // Map the score column to color
+            dimension: 0,
+            inRange: {
+            color: ['#65CAF2', '#B082C9', '#FF5F92']
+            }
+        },
+        series: [
+            {
+            type: 'bar',
+            encode: {
+                // Map the "amount" column to X axis.
+                x: '활용도',
+                // Map the "product" column to Y axis
+                y: 'product'
+            }
+            }
+        ]
+        };
+
+            if (option && typeof option === 'object') {
+            myChart.setOption(option);
+            }
+
+            window.addEventListener('resize', myChart.resize);
+        </script><br><br>
+
+
+
+
+
+        <!-- OA -->
+        <div id="oa" style="height: 30%"></div>
+
+        <script type="text/javascript">
+            var dom = document.getElementById('oa');
+            var myChart = echarts.init(dom, null, {
+            renderer: 'canvas',
+            useDirtyRect: false
+            });
+            var app = {};
+            
+            var option;
+
+            option = {
+                title: {
+                    text: "OA",
+                    left: "center"
+                },
+        dataset: {
+            source: [
+            ['활용도', 'product'],
+            [75, 'Access'],
+            [85, 'Excel'],
+            [87, 'Powerpoint']
+            ]
+        },
+        grid: { containLabel: true },
+        xAxis: { name: '활용도' },
+        yAxis: { type: 'category' },
+        visualMap: {
+            orient: 'horizontal',
+            left: 'center',
+            min: 10,
+            max: 100,
+            text: ['High Score', 'Low Score'],
+            // Map the score column to color
+            dimension: 0,
+            inRange: {
+            color: ['#65CAF2', '#B082C9', '#FF5F92']
+            }
+        },
+        series: [
+            {
+            type: 'bar',
+            encode: {
+                // Map the "amount" column to X axis.
+                x: '활용도',
+                // Map the "product" column to Y axis
+                y: 'product'
+            }
+            }
+        ]
+        };
+
+            if (option && typeof option === 'object') {
+            myChart.setOption(option);
+            }
+
+            window.addEventListener('resize', myChart.resize);
+        </script><br><br>
+
+</body>
+</html>
