@@ -8,5 +8,5 @@
 포트폴리오에 Apache Echarts를 삽입하였습니다.
 
 ### Used
-[image](https://user-images.githubusercontent.com/94339489/197381069-5667c72b-d5a9-4ac8-84cb-5e6cf817a7f8.jpg)   
-[image](https://user-images.githubusercontent.com/94339489/197381088-e4063c55-7b6b-4d7e-98b7-4a43b30697fc.jpg)
+![image](https://user-images.githubusercontent.com/94339489/197381129-74894e5c-d426-4178-b54b-112f322ad9e8.jpg)
+![image](https://user-images.githubusercontent.com/94339489/197381145-a28fba4c-51b8-49af-86d0-dcca1772828c.jpg)
