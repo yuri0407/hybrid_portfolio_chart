@@ -10,3 +10,5 @@
 ### Used
 ![image](https://user-images.githubusercontent.com/94339489/197381129-74894e5c-d426-4178-b54b-112f322ad9e8.jpg)
 ![image](https://user-images.githubusercontent.com/94339489/197381145-a28fba4c-51b8-49af-86d0-dcca1772828c.jpg)
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=E46581&height=100&section=footer)
